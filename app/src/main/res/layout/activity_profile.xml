@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.activities.ProfileActivity">
+
+
+    <TextView
+        android:id="@+id/txtPrfEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="180dp"
+        android:gravity="center"
+        android:text="E-mail"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPrfEmailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textColor="#DF0A0A"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfEmailLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfEmailLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfEmailLabel" />
+
+    <TextView
+        android:id="@+id/txtPrfDateCreatedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/date_account_created"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfEmailValue"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfEmailValue"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfEmailValue" />
+
+    <TextView
+        android:id="@+id/txtPrfDateCreatedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textColor="#DF0A0A"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfDateCreatedLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfDateCreatedLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfDateCreatedLabel" />
+
+    <TextView
+        android:id="@+id/txtPrfNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="@string/full_name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfDateCreatedValue"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfDateCreatedValue"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfDateCreatedValue" />
+
+    <EditText
+        android:id="@+id/edTxtPrfNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfNameLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfNameLabel" />
+
+    <TextView
+        android:id="@+id/txtPrfAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/age"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtPrfNameValue"
+        app:layout_constraintStart_toStartOf="@+id/edTxtPrfNameValue"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtPrfNameValue" />
+
+    <EditText
+        android:id="@+id/edTxtPrfAgeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfAgeLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfAgeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfAgeLabel" />
+
+    <TextView
+        android:id="@+id/txtPrfCountryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/country"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtPrfAgeValue"
+        app:layout_constraintStart_toStartOf="@+id/edTxtPrfAgeValue"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtPrfAgeValue" />
+
+    <EditText
+        android:id="@+id/edTxtPrfCountryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrfCountryLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtPrfCountryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrfCountryLabel" />
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#15931A"
+        android:gravity="center"
+        android:text="@string/save_changes"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtPrfCountryValue"
+        app:layout_constraintStart_toStartOf="@+id/edTxtPrfCountryValue"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtPrfCountryValue" />
+
+    <Button
+        android:id="@+id/btnBackProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#EC0505"
+        android:gravity="center"
+        android:text="@string/back"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

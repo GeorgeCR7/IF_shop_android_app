@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.activities.AddItemActivity">
+
+    <TextView
+        android:id="@+id/txtChooseProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/choose_product"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edTxtProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtChooseProduct"
+        app:layout_constraintStart_toStartOf="@+id/txtChooseProduct"
+        app:layout_constraintTop_toBottomOf="@+id/txtChooseProduct" />
+
+    <Button
+        android:id="@+id/btnAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#15931A"
+        android:gravity="center"
+        android:text="@string/add"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/spnQuantity"
+        app:layout_constraintStart_toStartOf="@+id/spnQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/spnQuantity" />
+
+    <TextView
+        android:id="@+id/txtShowHereList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/show_here"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddProduct"
+        app:layout_constraintStart_toStartOf="@+id/btnAddProduct"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddProduct" />
+
+    <Button
+        android:id="@+id/btnShowList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#0D83E1"
+        android:gravity="center"
+        android:text="@string/list"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtShowHereList"
+        app:layout_constraintStart_toStartOf="@+id/txtShowHereList"
+        app:layout_constraintTop_toBottomOf="@+id/txtShowHereList" />
+
+    <Button
+        android:id="@+id/btnBackAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#EC0505"
+        android:text="@string/back"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/quantity"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtProduct"
+        app:layout_constraintStart_toStartOf="@+id/edTxtProduct"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtProduct" />
+
+    <Spinner
+        android:id="@+id/spnQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtQuantity"
+        app:layout_constraintStart_toStartOf="@+id/txtQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuantity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">IF_shop</string>
+    <string name="apiKey"></string>
+
+    <!-- Login Activity -->
+    <string name="login">Σύνδεση</string>
+    <string name="new_user">Νέος χρήστης; Εγγραφή εδώ!</string>
+    <string name="forgot_pass">Ξέχασες τον κωδικό σού;</string>
+    <string name="email">Email...</string>
+    <string name="password">Κωδικός...</string>
+    <string name="log_in_success">Επιτυχής σύνδεση!</string>
+    <string name="log_in_error">Σφάλμα σύνδεσης </string>
+    <string name="email_empty">Κένη διεύθυνση email!</string>
+    <string name="password_empty">Κενό πεδίο κωδικού!</string>
+
+    <!-- Register Activity -->
+    <string name="register">Εγγραφή</string>
+    <string name="old_user">Ήδη χρήστης; Σύνδεση εδώ!</string>
+    <string name="password_again">Κωδικός ξανά...</string>
+    <string name="success_register">Επιτυχής εγγραφή!</string>
+    <string name="error_register">Σφάλμα εγγραφής </string>
+    <string name="passwords_not_match">Οι κωδικοί δεν ταιριάζουν!</string>
+    <string name="email_not_valid">Μη έγκυρο email!</string>
+    <string name="password_confirm">Επιβεβαιώστε τον κωδικό!</string>
+    <string name="password_length_error">Ο κωδικός πρέπει να έχει τουλάχιστον 6 χαρακτήρες!</string>
+
+    <!-- Forgot Password Activity -->
+    <string name="enter_mail_app">Το email σού, στην εφαρμογή...</string>
+    <string name="recover">Ανάκτηση κωδικού</string>
+    <string name="back">Πίσω</string>
+
+    <!-- Main Activity -->
+    <string name="appTitle">IF_shop</string>
+    <string name="make_list1">Κάνε αρχικά την</string>
+    <string name="list">λίστα</string>
+    <string name="make_list2">με τα ψώνια σού!...</string>
+    <string name="weather1">...και δες εδώ με τι</string>
+    <string name="weather">καιρό</string>
+    <string name="weather2">θα ψωνίσεις!</string>
+    <string name="log_out_main">Επιτυχής έξοδος!</string>
+    <string name="logOut">Έξοδος</string>
+    <string name="about">Σχετικά</string>
+    <string name="profile">Προφίλ</string>
+    <string name="monday">Δευτέρα</string>
+    <string name="tuesday">Τρίτη</string>
+    <string name="wednesday">Τετάρτη</string>
+    <string name="thursday">Πέμπτη</string>
+    <string name="friday">Παρασκευή</string>
+    <string name="saturday">Σάββατο</string>
+    <string name="sunday">Κυριακή</string>
+
+    <!-- Add Item Activity -->
+    <string name="choose_product">Επιλογή προϊόντος</string>
+    <string name="add">Προσθήκη</string>
+    <string name="show_here">Δες εδώ την</string>
+    <string name="add_success">Επιτυχής προσθήκη!</string>
+    <string name="quantity">Ποσότητα</string>
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Weather Activity -->
+    <string name="show_weather">Δες τον καιρό</string>
+    <string name="here">εδώ!</string>
+    <string name="temp_today">Η θερμοκρασία σήμερα είναι</string>
+    <string name="weather_fail">Αποτυχία ανάκτησης δεδομένων καιρού</string>
+    <string name="loading">Φόρτωση...</string>
+
+    <!-- Profile Activity -->
+    <string name="save_changes">Αποθήκευση</string>
+    <string name="date_account_created">Ημερομηνία δημιουργίας λογαριασμού</string>
+    <string name="full_name">Ονοματεπώνυμο</string>
+    <string name="no_name">Δεν υπάρχει όνομα</string>
+    <string name="age">Ηλικία</string>
+    <string name="no_age">Δεν υπάρχει ηλικία</string>
+    <string name="country">Χώρα</string>
+    <string name="no_country">Δεν υπάρχει χώρα</string>
+    <string name="update_user_profile">Επιτυχής ενημέρωση προφίλ!</string>
+
+    <!-- Admin Activity -->
+    <string name="admin_page">Σελίδα διαχειριστή</string>
+    <string name="mail_forDelete">Email χρήστη προς διαγραφή...</string>
+    <string name="delete">Διαγραφή</string>
+    <string name="user_notExists">Ο χρήστης δεν υπάρχει.</string>
+    <string name="delete_success">Επιτυχής διαγραφή.</string>
+    <string name="delete_fail">Αποτυχία διαγραφής.</string>
+
+</resources>

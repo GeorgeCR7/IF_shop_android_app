@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.activities.RegisterActivity">
+
+    <TextView
+        android:id="@+id/txtRegisterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="177dp"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="#040404"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edTxtRegisterEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/txtRegisterLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtRegisterLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegisterLabel" />
+
+    <EditText
+        android:id="@+id/edTxtRegisterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtRegisterEmail"
+        app:layout_constraintStart_toStartOf="@+id/edTxtRegisterEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtRegisterEmail" />
+
+    <EditText
+        android:id="@+id/edTxtRegisterPasswordAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/password_again"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtRegisterPassword"
+        app:layout_constraintStart_toStartOf="@+id/edTxtRegisterPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtRegisterPassword" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtRegisterPasswordAgain"
+        app:layout_constraintStart_toStartOf="@+id/edTxtRegisterPasswordAgain"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtRegisterPasswordAgain" />
+
+    <Button
+        android:id="@+id/btnGoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="@string/old_user"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.activities.MainActivity">
+
+    <TextView
+        android:id="@+id/txtAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMakeList1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:text="@string/make_list1"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtAppTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtAppTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtAppTitle" />
+
+    <Button
+        android:id="@+id/btnMakeList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#4CAF50"
+        android:gravity="center"
+        android:text="@string/list"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtMakeList1"
+        app:layout_constraintStart_toStartOf="@+id/txtMakeList1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMakeList1" />
+
+    <TextView
+        android:id="@+id/txtMakeList2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/make_list2"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnMakeList"
+        app:layout_constraintStart_toStartOf="@+id/btnMakeList"
+        app:layout_constraintTop_toBottomOf="@+id/btnMakeList" />
+
+    <TextView
+        android:id="@+id/txtWeather1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="@string/weather1"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtMakeList2"
+        app:layout_constraintStart_toStartOf="@+id/txtMakeList2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMakeList2" />
+
+    <Button
+        android:id="@+id/btnWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#0D83E1"
+        android:gravity="center"
+        android:text="@string/weather"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtWeather1"
+        app:layout_constraintStart_toStartOf="@+id/txtWeather1"
+        app:layout_constraintTop_toBottomOf="@+id/txtWeather1" />
+
+    <TextView
+        android:id="@+id/txtWeather2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/weather2"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnWeather"
+        app:layout_constraintStart_toStartOf="@+id/btnWeather"
+        app:layout_constraintTop_toBottomOf="@+id/btnWeather" />
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:backgroundTint="#D38005"
+        android:gravity="center"
+        android:text="@string/profile"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtWeather2"
+        app:layout_constraintStart_toStartOf="@+id/txtWeather2"
+        app:layout_constraintTop_toBottomOf="@+id/txtWeather2" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#EC0505"
+        android:gravity="center"
+        android:text="@string/logOut"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnProfile"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="@+id/btnProfile"
+        app:layout_constraintTop_toBottomOf="@+id/btnProfile" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtAppTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtAppTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtAppTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
