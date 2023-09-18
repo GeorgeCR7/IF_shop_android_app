@@ -1,12 +1,8 @@
 package com.example.if_shop_android_app.app.service;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
-import com.example.if_shop_android_app.R;
 import com.example.if_shop_android_app.app.models.Product;
-import com.example.if_shop_android_app.app.models.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,19 +23,16 @@ public class ProductCloudService {
         reference.child("product_" + id).setValue(product);
     }
 
-    public void downloadProducts(DatabaseReference reference) {
-
-        ArrayList<Product> tempList = new ArrayList<>();
+    public void downloadCloudProducts(DatabaseReference reference) {
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Product p  = dataSnapshot.getValue(Product.class);
-                    tempList.add(p);
+                    products.add(p);
                 }
-                Log.i("List size ondatachange: ", ""+tempList.size());
-                setProducts(tempList);
+                setProducts(products);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
@@ -53,7 +46,6 @@ public class ProductCloudService {
     }
 
     public void setProducts(ArrayList<Product> products) {
-        Log.i("List size setProducts: ", ""+products.size());
         this.products = products;
     }
 }

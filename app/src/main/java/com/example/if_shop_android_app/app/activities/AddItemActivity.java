@@ -16,6 +16,7 @@ import com.example.if_shop_android_app.R;
 import com.example.if_shop_android_app.app.local_DB.LocalDBHandler;
 import com.example.if_shop_android_app.app.models.Product;
 import com.example.if_shop_android_app.app.service.ProductCloudService;
+import com.example.if_shop_android_app.app.service.SyncDBService;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,10 +41,11 @@ public class AddItemActivity extends AppCompatActivity implements AdapterView.On
     FirebaseAuth mAuth;
 
     ProductCloudService productCloudService;
+    SyncDBService syncDBService;
 
     LocalDBHandler localDB;
 
-    ArrayList<Product> allProducts, myProducts;
+    ArrayList<Product> allProducts, myProducts, localProducts;
 
 
     @Override
@@ -69,8 +71,10 @@ public class AddItemActivity extends AppCompatActivity implements AdapterView.On
 
         allProducts = new ArrayList<>();
         myProducts = new ArrayList<>();
+        localProducts = new ArrayList<>();
 
         productCloudService = new ProductCloudService();
+        syncDBService = new SyncDBService(productCloudService);
         localDB = new LocalDBHandler();
 
         reference = FirebaseDatabase.getInstance().getReference("Products");
@@ -105,8 +109,12 @@ public class AddItemActivity extends AppCompatActivity implements AdapterView.On
                         }
                     }
 
-                    //TODO: Method to get products for the Local DB.
+                    // Get the products from the local MySQL Database.
+                    downloadLocalProducts();
+                    localProducts = localDB.getProducts();
 
+                    // Trigger synchronization
+                    //syncDBService.syncProducts(localProducts);
 
                     Intent intent = new Intent(AddItemActivity.this, ListActivity.class);
                     intent.putParcelableArrayListExtra("PRODUCTS_LIST", myProducts);
@@ -131,6 +139,10 @@ public class AddItemActivity extends AppCompatActivity implements AdapterView.On
         int max = 99999999;
 
         return (int)Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    private void downloadLocalProducts(){
+        localDB.doAction(null, "SELECT", mAuth.getCurrentUser().getEmail());
     }
 
     @Override
