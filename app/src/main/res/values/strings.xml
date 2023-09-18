@@ -27,6 +27,9 @@
     <!-- Forgot Password Activity -->
     <string name="enter_mail_app">Το email σού, στην εφαρμογή...</string>
     <string name="recover">Ανάκτηση κωδικού</string>
+    <string name="warning">Προσοχή!</string>
+    <string name="check_your_spam_folder">Έλεγξε τον φάκελο ανεπιθυμήτων!</string>
+    <string name="check_inbox_recover">Έλεγξε τα μέιλ σού, για τον κωδικό ανάκτησης.</string>
     <string name="back">Πίσω</string>
 
     <!-- Main Activity -->
