@@ -1,8 +1,5 @@
 package com.example.if_shop_android_app.app.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -10,6 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.if_shop_android_app.R;
 import com.example.if_shop_android_app.app.models.User;
@@ -82,8 +82,6 @@ public class AdminActivity extends AppCompatActivity {
                                 deleteUser(emailForDeletion.replace(".", ""));
                                 break;
                             }
-                            /*Toast.makeText(AdminActivity.this, R.string.user_notExists,
-                                    Toast.LENGTH_SHORT).show();*/
                         }
                     }
                     @Override
@@ -104,8 +102,6 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     private void deleteUser(String emailForDeletion) {
-
-        //reference = FirebaseDatabase.getInstance().getReference("Users");
 
         reference.child(emailForDeletion).removeValue().addOnCompleteListener(task -> {
             if (task.isSuccessful()){

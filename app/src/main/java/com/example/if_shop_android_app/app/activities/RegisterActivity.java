@@ -1,25 +1,18 @@
 package com.example.if_shop_android_app.app.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.if_shop_android_app.R;
 import com.example.if_shop_android_app.app.models.User;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 
 import java.util.Calendar;
 import java.util.Date;
@@ -99,26 +92,23 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             return;
         } else {
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(RegisterActivity.this,
-                                R.string.success_register,
-                                Toast.LENGTH_SHORT).show();
-                        // Create a new User object, at first, only with email.
-                        User user = new User(email, "", "", setDateCreated(), "");
-                        // Store the new User to the Firebase.
-                        reference.child(email.replace(".","")).setValue(user);
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    Toast.makeText(RegisterActivity.this,
+                            R.string.success_register,
+                            Toast.LENGTH_SHORT).show();
+                    // Create a new User object, at first, only with email.
+                    User user = new User(email, "", "", setDateCreated(), "");
+                    // Store the new User to the Firebase.
+                    reference.child(email.replace(".","")).setValue(user);
 
-                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Toast.makeText(RegisterActivity.this,
-                                R.string.error_register + "" + task.getException(),
-                                Toast.LENGTH_SHORT).show();
-                    }
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(RegisterActivity.this,
+                            R.string.error_register + "" + task.getException(),
+                            Toast.LENGTH_SHORT).show();
                 }
             });
         }

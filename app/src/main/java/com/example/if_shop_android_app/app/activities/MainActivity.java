@@ -1,7 +1,5 @@
 package com.example.if_shop_android_app.app.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,10 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.if_shop_android_app.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -30,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnMakeList, btnWeather;
     Button btnProfile, btnLogOut;
-
-    // Firebase objects for reading database & authentication.
-    private FirebaseDatabase rootNode;
-    private DatabaseReference reference;
     FirebaseAuth mAuth;
 
     @Override
@@ -41,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rootNode = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
         txtAppTitle = findViewById(R.id.txtAppTitle);
+        //colorMainAppTitle(txtAppTitle.getText().toString());
 
         txtDate = findViewById(R.id.txtDate);
         txtDate.setText(setCurrentDate());
